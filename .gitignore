@@ -1,0 +1,49 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+.env
+.env.*
+
+# VS Code settings
+.vscode/
+
+# Streamlit specific
+.streamlit/config.toml
+.streamlit/secrets.toml
+
+# Jupyter Notebook checkpoints (if used)
+.ipynb_checkpoints
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+
+# Pyre type checker
+.pyre/
+
+# ChromaDB
+chroma_db/
+*.chroma/
+
+# Other local data
+*.sqlite
+*.db
+
+# Pydantic cache
+.pydantic/
+
+# Misc
+*.bak
+*.swp
