@@ -1,9 +1,9 @@
 import streamlit as st
 
 # Set up page configuration
-st.set_page_config(page_title="Conversational Assistant", layout="centered")
+st.set_page_config(page_title="DocumentQA and Appointment Assistantt", layout="centered")
 
-st.markdown("<p style='font-size: 3em; font-weight: bold;'>Welcome to xxx</p>", unsafe_allow_html=True)
+st.markdown("<p style='font-size: 3em; font-weight: bold;'>DocumentQA and Appointment Assistant</p>", unsafe_allow_html=True)
 
 st.markdown("""
 <p style="color: white; font-size: 18px;">

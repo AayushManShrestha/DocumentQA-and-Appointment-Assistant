@@ -5,7 +5,7 @@ from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.tools import Tool
 from langchain_core.messages import AIMessage, HumanMessage
 
-from tools.document_processor import process_documents
+from utils.document_processor import process_documents
 from config.llm import llm
 
 # Helper: Initialize session state

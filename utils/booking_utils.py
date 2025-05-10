@@ -1,5 +1,5 @@
-from tools.validator import validate_field
-from tools.date_utils import parse_natural_date
+from utils.validator import validate_field
+from utils.date_utils import parse_natural_date
 import json
 import os
 
