@@ -10,8 +10,8 @@ from config.llm import llm
 
 # Helper: Initialize session state
 def initialize_state():
-    if "messages" not in st.session_state:
-        st.session_state.messages = []
+    if "qa_messages" not in st.session_state:
+        st.session_state.qa_messages = []
     if "vector_store" not in st.session_state:
         st.session_state.vector_store = None
     if "last_uploaded_files" not in st.session_state:
@@ -76,18 +76,18 @@ def main():
     executor = AgentExecutor(agent=agent, tools=tools)
 
     # Show chat history
-    for msg in st.session_state.messages:
+    for msg in st.session_state.qa_messages:
         st.chat_message(msg["role"]).write(msg["content"])
 
     # Chat input
     user_input = st.chat_input("Ask me anything about the uploaded documents...")
     if user_input:
-        st.session_state.messages.append({"role": "user", "content": user_input})
+        st.session_state.qa_messages.append({"role": "user", "content": user_input})
         try:
             response = executor.invoke({"input": user_input})
-            st.session_state.messages.append({"role": "assistant", "content": response["output"]})
+            st.session_state.qa_messages.append({"role": "assistant", "content": response["output"]})
         except Exception as e:
-            st.session_state.messages.append({"role": "assistant", "content": f"Something went wrong: {e}"})
+            st.session_state.qa_messages.append({"role": "assistant", "content": f"Something went wrong: {e}"})
 
         st.rerun()
 
